@@ -94,3 +94,7 @@ text = input("Vous pouvez choisire d'utiliser un objet pour vous accordé un pas
 ##########
     #print ("La troisième possède une marre rempli de lamproie assoiffé !\n")
 ##########
+
+##########
+    #print ("le projet prend de l'essort")
+##########
