@@ -11,37 +11,35 @@ def __init__(self):
 		for x in self.inventaire
 		linventaire = linventaire + "- " + x +"\n"
 		return linventaire
-		
+
 #---------------------------------------------------------------------------------------------------
-		
+
 class Donjon:
-	"Le donjon doit empècher l'aventurier de voler son trésor"
+
 	def __init__(self):
 	self.salles = salles = ["La mare pleinne de lamproie","La chausse trappe","Le saut de liannes mal accrocher","Un chemin avec du gaz imflamable","Le plafons a pic","Le couloir a tir de carabine","Des insects empoisonés","Les flaque d'acides"]
 	self.cheminpiege = 0
-#---------------------------------------------------------------------------------------------------	
-	
-print ("Bienvenu")
-text = input("Connaissé vous les règles de ce jeu ?\n")
-if text == "non":
-    print ("Alors il est temps de vous les expliqué !")
-elif text == "oui":
-    print ("tant mieux")
-    
-text = input("Etes vous l'aventurier ?\n")
+#---------------------------------------------------------------------------------------------------
+	def menu_regles():
+		print ("Bienvenu")
+		text = input("Connaissé vous les règles de ce jeu ?\n")
+		response= oui_ou_non(text)
+		if response = 0:
+	    	print ("Alors il est temps de vous les expliqué !")
+			print ("Le donjon doit empècher l'aventurier de voler son trésor en neutralisant l'aventurier")
+			print ("L'aventurier doit voler le trésor du donjon en déjouant ou évitant les pièges")
+		elif response = 1:
+	    	print ("tant mieux")
 
-#while text != "oui" or text != "non":
-#    print ("je n'ai pas compris")
-#   text = input("Etes vous l'aventurier ?\n")
-#    if text == "oui" or text == "non":
-#        break
-
-if text == "non":
-    joueur = 1
-    print ("Alors c'est vous le fameux donjon maléfique !")
-elif text == "oui":
-    joueur = 2
-    print ("Alors c'est vous le fameux aventurier alors prennez place a l'orée du donjon !")
+	def menu_choix_role(arg):
+		text = input("Etes vous l'aventurier ?\n")
+		response= oui_ou_non(text)
+		if response = 0:
+	    	joueur = 1
+	    	print ("Alors c'est vous le fameux donjon maléfique !")
+		elif response = 1:
+	    	joueur = 2
+	    	print ("Alors c'est vous le fameux aventurier alors prennez place a l'orée du donjon !")
 
 print ("Bien commençon\n\nLe donjon commence !\n")
 
@@ -86,7 +84,7 @@ else:
     print("- un fossile\n")
     print("- un sac\n\n")
     print("Ces objet ne sont utilisable qu'une fois pour survivre !")
-	
+
 text = input("Vous pouvez choisire d'utiliser un objet pour vous accordé un passage sans emcombre !\n")
 
     #print ("Toujours pas mort le pilleur a utilisé XXX pour survivre")
@@ -98,3 +96,19 @@ text = input("Vous pouvez choisire d'utiliser un objet pour vous accordé un pas
 ##########
     #print ("le projet prend de l'essort")
 ##########
+def custom_reponse(text,tableau):
+  if text in tableau:
+    print("0")
+  else:
+    print("1")
+
+
+def oui_ou_non(text):
+  thislist = ["oui", "non"]
+  if text in thislist:
+    print("0")
+  else:
+    print("1")
+
+def tours_joueur():
+    print(self.joueur)
