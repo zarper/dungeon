@@ -1,51 +1,72 @@
+class Joueur:
+    def __init__(self,Aventurier,Donjon):
+        self.nom= nom_joueur
+        return self.Joueur
+#---------------------------------------------------------------------------------------------------
 class Aventurier:
-	"L'aventurier doit voler le trésor du donjon"
+    "L'aventurier doit voler le trésor du donjon"
 def __init__(self):
         self.chemin = 0
-		self.inventaire = inventaire = ['fouet','Torche','Fossil','Sac']
-	def get_chemin(self):
-        return self.chemin
-	def get_inventaire(self):
-        return self.inventaire
-	def affiche_inventaire(self):
-		for x in self.inventaire
-		linventaire = linventaire + "- " + x +"\n"
-		return linventaire
+        self.inventaire = inventaire = ['fouet','Torche','Fossil','Sac']
+        def get_nom(self):
+            return self.nom
+        def set_nom(new_nom):
+            self.nom= new_nom
+            return self.nom
+        def get_chemin(self):
+            return self.chemin
+        def set_chemin(new_chemin):
+            self.chemin= new_chemin
+            return self.chemin
+        def get_inventaire(self):
+            return self.inventaire
+        def set_inventaire(new_inventaire):
+            self.inventaire= new_inventaire
+            return self.inventaire
+        def affiche_inventaire(self):
+            for x in inventaire:
+                linventaire = linventaire + "- " + x +"\n"
+                return linventaire
 
 #---------------------------------------------------------------------------------------------------
 
 class Donjon:
-
-	def __init__(self):
-	self.salles = salles = ["La mare pleinne de lamproie","La chausse trappe","Le saut de liannes mal accrocher","Un chemin avec du gaz imflamable","Le plafons a pic","Le couloir a tir de carabine","Des insects empoisonés","Les flaque d'acides"]
-	self.cheminpiege = 0
+    def __init__(self):
+        self.pieges = ["La mare pleinne de lamproie","La chausse trappe","Le saut de liannes mal accrocher","Un chemin avec du gaz imflamable","Le plafons a pic","Le couloir a tir de carabine","Des insects empoisonés","Les flaque d'acides"]
+        self.salles = ["Une grande mare","Une grande dalle","Un ravin","Un couloir","Une pièce carré","Un couloir","Des herbes hautes","Des sentiers avec flaques"]
+        self.cheminpiege = 0
+        def get_nom(self):
+            return self.nom
+        def set_nom(new_nom):
+            self.nom= new_nom
+            return self.nom
 #---------------------------------------------------------------------------------------------------
-	def menu_regles():
-		print ("Bienvenu")
-		text = input("Connaissé vous les règles de ce jeu ?\n")
-		response= oui_ou_non(text)
-		if response = 0:
-	    	print ("Alors il est temps de vous les expliqué !")
-			print ("Le donjon doit empècher l'aventurier de voler son trésor en neutralisant l'aventurier")
-			print ("L'aventurier doit voler le trésor du donjon en déjouant ou évitant les pièges")
-		elif response = 1:
-	    	print ("tant mieux")
+    def menu_regles():
+        print ("Bienvenu")
+        text = input("Connaissé vous les règles de ce jeu ?\ n")
+        response= oui_ou_non(text)
+        if response == "0":
+            print ("Alors il est temps de vous les expliqué !")
+            print ("Le donjon doit empècher l'aventurier de voler son trésor en neutralisant l'aventurier")
+            print ("L'aventurier doit voler le trésor du donjon en déjouant ou évitant les pièges")
+        elif response == "1":
+            print ("tant mieux")
 
-	def menu_choix_role(arg):
-		text = input("Etes vous l'aventurier ?\n")
-		response= oui_ou_non(text)
-		if response = 0:
-	    	joueur = 1
-	    	print ("Alors c'est vous le fameux donjon maléfique !")
-		elif response = 1:
-	    	joueur = 2
-	    	print ("Alors c'est vous le fameux aventurier alors prennez place a l'orée du donjon !")
+    def menu_choix_role(arg):
+        text = input("Etes vous l'aventurier ?\n")
+        response= oui_ou_non(text)
+        if response == "0":
+            joueur = "1"
+            print ("Alors c'est vous le fameux donjon maléfique !")
+        elif response == "1":
+            joueur = "2"
+            print ("Alors c'est vous le fameux aventurier alors prennez place a l'orée du donjon !")
 
 print ("Bien commençon\n\nLe donjon commence !\n")
 
 ###########################################
 #donjon
-if joueur == 1:
+if joueur == "1":
     print ("Un aventurier ce présente a votre porte il a définitevement \nl'intention de s'introduire et de dérober vos trésors\n")
     print ("Vous avez 3 salles pour éliminer ce géneur\n")
     print ("La première salle possède 3 chemin :\n- une marre rempli de lamproie assoiffé !\n")
